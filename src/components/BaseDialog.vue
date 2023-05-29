@@ -2,7 +2,17 @@
   <transition name="dialog">
     <div v-if="active" class="dialog-backdrop" @click="handleBackdropClick">
       <div class="dialog-container" @click.stop>
-        <slot/>
+        <div class="dialog-title">
+          <slot name="title" />  
+        </div>
+
+        <div class="dialog-body">
+          <slot/>
+        </div>
+
+        <div class="dialog-footer">
+          <slot name="footer" />  
+        </div>
       </div>
     </div>
   </transition>
@@ -23,6 +33,17 @@ export default {
 </script>
 
 <style scoped>
+.dialog-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.dialog-footer {
+    text-align: right;
+    margin-top: 20px;
+}
+
 .dialog-backdrop {
   position: fixed;
   top: 0;
@@ -59,4 +80,5 @@ export default {
 .dialog-leave-to .dialog-container {
   transform: scale(0.9);
 }
+
 </style>
