@@ -14,7 +14,7 @@
 </template>
   
 <script>
-import BaseDialog from "./BaseDialog.vue";
+import BaseDialog from "../BaseDialog.vue";
 
 export default {
     name: "AlertDialog",

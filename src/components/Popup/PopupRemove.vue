@@ -2,6 +2,7 @@
   <BaseDialogVue v-bind="$attrs" v-on="$listeners">
         <div class="title" slot="title">
             Title Popup Remove
+            <p> 123 </p>
         </div>
         
         <div class="content">
@@ -19,7 +20,11 @@ import BaseDialogVue from '../BaseDialog.vue'
 export default {
     components: {
         BaseDialogVue
-    }
+    },
+
+    mounted () {
+        console.log('ref', this.$refs.title);
+    },
 }
 </script>
 

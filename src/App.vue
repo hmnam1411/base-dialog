@@ -6,7 +6,7 @@
     <PopupRemoveVue :active.sync="showPopTest"/>
 
     <button type="button" @click="show = !show">Alert</button>
-    
+
     <button type="button" @click="show2 = !show2">Alert222</button>
 
     <button type="button" @click="showPopTest = !showPopTest">Alert222</button>
@@ -15,7 +15,7 @@
 </template>
 
 <script>
-import AlertDialog from "./components/AlertDialog.vue";
+import AlertDialog from "./components/Popup/AlertDialog.vue";
 import PopupRemoveVue from './components/Popup/PopupRemove.vue';
 
 export default {
